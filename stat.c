@@ -9,6 +9,8 @@
 
 int main(){
     struct stat statbuffer;
-    
+    stat("./stat.c", &statbuffer);
+    printf("\tsize: %lld\n", statbuffer.st_size);
+    printf("\tmode: %o\n", statbuffer.st_mode);
     return 0;
 }
